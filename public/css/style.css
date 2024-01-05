@@ -114,3 +114,12 @@ body{
 }
 
 #map { width: 900px; height: 500px; border: 2px; margin-bottom: 1rem;}
+
+@media screen and (max-width: 700px) {
+    #map{
+        width: 220px;
+        height: 400px;
+        border: 2px;
+         margin-bottom: 1rem;
+    }
+  }
