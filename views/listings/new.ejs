@@ -1,0 +1,53 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <h3>Create a New List</h3>
+    <div class="row mt-3">
+        <div class="col-8 offset-2">
+    <form method = "POST" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+        <input type="text" placeholder="Enter a Cathcy Title" id = "title" name="listing[title]" class="form-control" required>
+        <div class="valid-feedback">
+            Title Looks good!
+        </div>
+        
+        </div >
+        <div class="mb-3">
+            <label for="image" class="form-label">Upload Image</label>
+            <input type="file" name="listing[image]" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+        <textarea name="listing[description]" cols="30" rows="10" class="form-control" required></textarea>
+        <div class="invalid-feedback">
+            Please enter some description
+        </div>
+        </div>
+        <div class="row">
+            <div class="mb-3 col-md-4">
+                <label for="price" class="form-label">Price</label>
+                <input type="text" name="listing[price]" class="form-control" placeholder="Price" required>
+                <div class="invalid-feedback">
+                    Price should be Valid
+                </div>
+            </div>
+            <div class="mb-3 col-md-8" >
+                <label for="country" class="form-label">Country</label>
+                <input type="text" name="listing[country]" class="form-control" placeholder="Country" required>
+                <div class="invalid-feedback">
+                    Country should be Valid
+                </div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="location" class="form-label">Location</label>
+            <input type="text" name="listing[location]" class="form-control" placeholder="Location" required>
+            <div class="invalid-feedback">
+                Location should be Valid
+            </div>
+        </div>
+        <button class="btn btn-dark add-btn mt-3">Add</button><br><br>
+    </form>
+</div>
+</div>
+</body>
